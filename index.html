@@ -7,54 +7,36 @@
   <body>
     <section id="container">
       <img src="img/logo.png" alt="HTML Entity Lookup logo" class="logo" />
-    <h1>HTML Entity Lookup</h1>
-
-    <form action="" id="lookupForm">
-      <input type="text" name="s" value="" placeholder="HTML entities like (space separate for more)" id="s" />
-
-      <input type="checkbox" name="compressChk" value="" id="compress" /><label for="compress">Small output</label>
-      <input type="checkbox" name="extendedChk" value="" id="extended" /><label title="Include extended character sets in search" for="extended">Incl. extended</label>
-
-    </form>
-
-    <div class="divider"></div>
-
-    <div id="results"></div>
-
+      <h1>HTML Entity Lookup</h1>
+      <form action="" id="lookupForm">
+        <input type="text" name="s" value="" placeholder="HTML entities like (space separate for more)" id="s" />
+        <input type="checkbox" name="compressChk" value="" id="compress" /><label for="compress">Small output</label>
+        <input type="checkbox" name="extendedChk" value="" id="extended" /><label title="Include extended character sets in search" for="extended">Incl. extended</label>
+      </form>
+      <div class="divider"></div>
+      <div id="results"></div>
       <p class="lead">Using <abbr title="Hyper Text Markup Languge">HTML</abbr> entities is the right way to ensure all the characters on your page are <a href="http://validator.w3.org/check/referrer">validated</a>.  However, often finding the right entity code requires scanning through 250 rows of characters.</p>
-
       <p>This lookup allows you to quickly find the entity based on how it looks, e.g. like an <a href="?q=&lt;" rel="&lt;" class="lookupExample">&lt;</a> or the letter <a href="?q=c" rel="c" class="lookupExample">c</a>.</p>
-
-
+      <h2 id="features">Features</h2>
+      <ul>
+        <li>Search for entity characters based on how they look (taken from the <a href="http://www.w3.org/TR/html401/sgml/entities.html">W3C list of entities</a>)</li>
+        <li>Switch between standard and compressed views</li>
+        <li>Copy the HTML entity to the clipboard</li>
+        <li>Add your own keyword terms and characters to entities</li>
+        <li>Settings stored in a browser cookie</li>
+        <li>Available as a <a href="http://www.yining.org/2007/07/26/html-entity-char-lookup-firefox-extension/">Firefox plugin</a> - thanks to Yining</li>
+      </ul>
+      <p>To reset the keywords, clear your cookies for this page and the default keyword dictionary.</p>
+      <h2 id="howitworks">How it works</h2>
+      <p>The lookup searches the html entities for matches to the searched character based on how your character looks. For instance, the letter <a href="?q=c" rel="c" class="lookupExample">c</a> would match &copy; and &cent; entity, because of the way they look.</p>
+      <p>There's no clever logic behind this, only the most powerful computer known to man - man's own brain.</p>
+      <p>Each entity has had a list of 'like' matches added to them by hand and eye.  This is stored in a local dictionary file and loaded in during start-up (since it's so small there's no point in using an AJAX like solution).</p>
+      <p>The entity lookup also supports word searches and multiple searches space separated, such as <a rel="copy and cent" href="?q=copy%20and%20cent" class="lookupExample">copy and cent</a>.</p>
+    </section>
     <script src="js/jquery.min.js"></script>
     <script src="js/entities.js"></script>
     <script src="js/entity.data.js"></script>
     <script src="js/highlightFade.js"></script>
     <script src="js/entity-lookup.js"></script>
-
-    <h2 id="features">Features</h2>
-
-    <ul>
-    <li>Search for entity characters based on how they look (taken from the <a href="http://www.w3.org/TR/html401/sgml/entities.html">W3C list of entities</a>)</li>
-    <li>Switch between standard and compressed views</li>
-    <li>Copy the HTML entity to the clipboard</li>
-    <li>Add your own keyword terms and characters to entities</li>
-    <li>Settings stored in a browser cookie</li>
-    <li>Available as a <a href="http://www.yining.org/2007/07/26/html-entity-char-lookup-firefox-extension/">Firefox plugin</a> - thanks to Yining</li>
-    </ul>
-
-
-    <p>To reset the keywords, clear your cookies for this page and the default keyword dictionary.</p>
-
-    <h2 id="howitworks">How it Works</h2>
-
-    <p>The lookup searches the html entities for matches to the searched character based on how your character looks. For instance, the letter <a href="?q=c" rel="c" class="lookupExample">c</a> would match &copy; and &cent; entity, because of the way they look.</p>
-
-    <p>There's no clever logic behind this, only the most powerful computer known to man - man's own brain.</p>
-
-    <p>Each entity has had a list of 'like' matches added to them by hand and eye.  This is stored in a local dictionary file and loaded in during start-up (since it's so small there's no point in using an AJAX like solution).</p>
-
-    <p>The entity lookup also supports word searches and multiple searches space separated, such as <a rel="copy and cent" href="?q=copy%20and%20cent" class="lookupExample">copy and cent</a>.</p>
-  </section>
   </body>
 </html>
