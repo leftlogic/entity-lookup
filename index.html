@@ -10,7 +10,7 @@
     <h1>HTML Entity Lookup</h1>
 
     <form action="" id="lookupForm">
-      <input type="text" name="s" value="" placeholder="HTML entities like" id="s" />
+      <input type="text" name="s" value="" placeholder="HTML entities like (space separate for more)" id="s" />
 
       <input type="checkbox" name="compressChk" value="" id="compress" /><label for="compress">Small output</label>
       <input type="checkbox" name="extendedChk" value="" id="extended" /><label title="Include extended character sets in search" for="extended">Incl. extended</label>
@@ -19,11 +19,12 @@
 
     <div class="divider"></div>
 
-    <div id="results">
-      <p>Using <abbr title="Hyper Text Markup Languge">HTML</abbr> entities is the right way to ensure all the characters on your page are <a href="http://validator.w3.org/check/referrer">validated</a>.  However, often finding the right entity code requires scanning through 250 rows of characters.</p>
+    <div id="results"></div>
+
+      <p class="lead">Using <abbr title="Hyper Text Markup Languge">HTML</abbr> entities is the right way to ensure all the characters on your page are <a href="http://validator.w3.org/check/referrer">validated</a>.  However, often finding the right entity code requires scanning through 250 rows of characters.</p>
 
       <p>This lookup allows you to quickly find the entity based on how it looks, e.g. like an <a href="?q=&lt;" rel="&lt;" class="lookupExample">&lt;</a> or the letter <a href="?q=c" rel="c" class="lookupExample">c</a>.</p>
-    </div>
+
 
     <script src="js/jquery.min.js"></script>
     <script src="js/entities.js"></script>

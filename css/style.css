@@ -1,3 +1,9 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
@@ -41,10 +47,19 @@ h2 {
   font-weight: bold;
 }
 
-p {
+ul, p {
   color: #888888;
   font-size: 1rem;
   margin: 0 0 2rem;
+}
+
+p.lead {
+  margin: 2rem 0;
+}
+
+ul {
+  list-style-position: inside;
+  padding: 0;
 }
 
 a {
@@ -64,7 +79,7 @@ form {
 input[type=text] {
   font: inherit;
   padding: 0.6rem 0.8rem 0.4rem;
-  width: 20rem;
+  width: 100%;
   outline: none;
   border-radius: 0;
   -webkit-appearance: none;
@@ -99,17 +114,14 @@ label[for=extended] {
 }
 
 #container {
-  max-width: 35rem;
-  margin: 6rem auto 0;
+  max-width: 39rem;
+  margin: 6rem auto;
+  padding: 0 2rem;
   text-align: center;
-  height: 100%;
 }
 
 .logo {
   width: 130px;
   opacity: 0.8;
   margin: 0 0 1.5rem;
-}
-
-#inner {
 }
