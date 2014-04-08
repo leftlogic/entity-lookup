@@ -1,0 +1,22 @@
+{
+  "name": "entity-lookup",
+  "version": "0.0.0",
+  "description": "Using HTML entities is the right way to ensure all the characters on your page are validated. However, often finding the right entity code requires scanning through 250 rows of characters.",
+  "main": "index.js",
+  "scripts": {
+    ":start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leftlogic/entity-lookup.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/leftlogic/entity-lookup/issues"
+  },
+  "homepage": "http://entity-lookup.leftlogic.com",
+  "dependencies": {
+    "st": "~0.4.1"
+  }
+}
