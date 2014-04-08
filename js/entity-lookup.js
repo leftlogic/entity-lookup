@@ -2,14 +2,14 @@
 var html = ['<div class="entity"><div class="html">@html@<',
   '/div><div class="detail"><div class="entityName">@entity@<',
   '/div><div class="entityCode">@html_replaced@<', '/div><div class="code">@code@<',
-  '/div><div class="tools"><img src="/images/entity_paste.png" title="Copy entity to clipboard" class="simple copybtn" /><span><img src="/images/entity_add.png" title="Add keyword or character" class="simple addbtn" /></span><',
+  '/div><div class="tools"><img src="img/entity_paste.png" title="Copy entity to clipboard" class="simple copybtn" /><span><img src="img/entity_add.png" title="Add keyword or character" class="simple addbtn" /></span><',
   '/div><div class="clear"><',
   '/div><div class="description">@description@<',
   '/div><',
   '/div><div class="clear"><',
   '/div><',
   '/div>'].join('');
-  
+
 var showRelated = false;
 var compress = false;
 var personalLike = {};
@@ -36,7 +36,7 @@ function savePersonalLike() {
       }
     });
   };
-  
+
   // based on editable http://www.dyve.net/jquery/?editable
   $.fn.mini_editable = function(code) {
     this.click(function() {
@@ -54,10 +54,10 @@ function savePersonalLike() {
         i.type = 'text';
         i.value = personalLike[code] || e.get(e.find(code)).like.join(' ');
         i.name = i.id = 'like' + code;
-        
+
         var l = document.createElement('label');
         $(l).attr('for', 'like' + code).html('Space separate \'like\' matches &nbsp;');
-        
+
         holder.append(d);
         f.appendChild(l);
         f.appendChild(i);
@@ -70,26 +70,26 @@ function savePersonalLike() {
             reset();
           }
         });
-        
+
         $(f).submit(function() {
           personalLike[code] = i.value;
           savePersonalLike();
           reset();
           return false;
         });
-        
+
         function reset() {
           $('div.disabled, form.editable', holder).remove();
-          me.editing = false;         
+          me.editing = false;
         }
       }
       this.editable();
     });
-    
+
     return this;
   };
 })(jQuery);
-  
+
 $(function() {
   var results = $('#results');
 
@@ -98,7 +98,7 @@ $(function() {
   if (pl != null && pl.length) {
     try {
       eval('personalLike = ' + pl);
-      
+
       // load in to the entity engine
      for (var v in personalLike) {
        e.setLike(v, personalLike[v].split(' '));
@@ -107,13 +107,13 @@ $(function() {
       // nice error
     }
   }
-  
+
   $('#compress').change(function() {
     if (this.checked) {
       results.addClass('compress');
     } else {
       results.removeClass('compress');
-    }      
+    }
     localStorage.setItem(this.name, this.checked.toString());
   }).checkAndFire();
 
@@ -127,17 +127,17 @@ $(function() {
       while (i--) {
         e.removeLast();
       }
-    }      
+    }
     localStorage.setItem(this.name, this.checked.toString());
     $('#s').keyup();
   }).checkAndFire();
-  
+
   if ($.browser.msie) {
     $('#compress').click(function() {
       $(this).change();
     })
   }
-      
+
   // $('#related').change(function() {
   //   showRelated = !!(this.checked);
   //   createCookie(this.name, showRelated.toString(), 365);
@@ -159,7 +159,7 @@ $(function() {
         found.each(function() {
           results.append(html.replace(/@html@/, this.html).replace(/@code@/, this.code).replace(/@entity@/g, this.entity || '&nbsp;').replace(/@description@/, this.description).replace(/@html_replaced@/, this.html.replace(/&/, '&amp;')));
           var entityHTML = this.html;
-          
+
           // for optimisation
           var images = results[0].getElementsByTagName('img');
           var imgLen = images.length;
@@ -178,14 +178,14 @@ $(function() {
       }
     }, 100);
   }).val('').focus();
-  
+
   $('a.lookupExample').click(function() {
     $('#s').val(this.rel).keyup().focus();
     return false;
   });
-  
+
   var initialSearch = document.location.search.match(/\b(q)=([^&=]*)\b/g);
-  
+
   if (initialSearch && initialSearch.length) {
       $('#s').val(unescape(initialSearch[0].substr(2))).keyup().focus();
   }
