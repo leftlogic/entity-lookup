@@ -140,31 +140,16 @@ label[for=extended] {
 
 div.entity {
   clear: both;
-  margin: 0;
-  padding: 10px 0 5px 0;
-/*  border-bottom: 1px solid #ccc;*/
-  position: relative; /* required for disabled block */
-}
-
-div.compress div.entity {
-  padding: 3px 0;
+  margin: 0 0 1rem;
+  padding: 0;
+  position: relative;
 }
 
 div.entity div.html {
   float: left;
-  margin-bottom: 20px;
   font-size: 300%;
   width: 60px;
-  background: url(/images/greyed.gif);
   text-align: center;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-div.compress div.entity div.html {
-  margin-bottom: 0;
-  background: none;
-  margin-top: 3px;
-  font-size: 110%;
 }
 
 div.entity div.detail {
@@ -184,24 +169,13 @@ div.entity div.detail div.entityCode {
   width: 150px;
 }
 
-div.compress div.entity div.detail div {
-  font-size: 100%;
-}
-
 div.entity div.description {
   margin-top: 5px;
+  color: #888888;
 }
 
 div.entity div.tools {
   font-size: 150%;
-}
-
-div.compress div.entity div.description {
-  display: none;
-}
-
-div.compress div.entity div.detail div.clear {
-  clear: none!important;
 }
 
 div.entity div.tools img {
