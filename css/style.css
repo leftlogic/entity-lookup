@@ -36,6 +36,11 @@ h1 {
   line-height: 1.6;
 }
 
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
 p {
   color: #888888;
   font-size: 1rem;
@@ -94,7 +99,7 @@ label[for=extended] {
 }
 
 #container {
-  max-width: 34rem;
+  max-width: 35rem;
   margin: 6rem auto 0;
   text-align: center;
   height: 100%;
