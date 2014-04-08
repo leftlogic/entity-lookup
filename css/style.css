@@ -125,3 +125,170 @@ label[for=extended] {
   opacity: 0.8;
   margin: 0 0 1.5rem;
 }
+
+
+
+
+
+
+
+
+
+div.entity {
+  clear: both;
+  margin: 0;
+  padding: 10px 0 5px 0;
+/*  border-bottom: 1px solid #ccc;*/
+  position: relative; /* required for disabled block */
+}
+
+div.compress div.entity {
+  padding: 3px 0;
+}
+
+div.entity div.html {
+  float: left;
+  margin-bottom: 20px;
+  font-size: 300%;
+  width: 60px;
+  background: url(/images/greyed.gif);
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+div.compress div.entity div.html {
+  margin-bottom: 0;
+  background: none;
+  margin-top: 3px;
+  font-size: 110%;
+}
+
+div.entity div.detail {
+  float: right;
+  width: 465px;
+}
+
+div.entity div.detail div.code,
+div.entity div.detail div.entityCode,
+div.entity div.detail div.entityName {
+  float: left;
+  width: 100px;
+  font-size: 150%;
+}
+
+div.entity div.detail div.entityCode {
+  width: 150px;
+}
+
+div.compress div.entity div.detail div {
+  font-size: 100%;
+}
+
+div.entity div.description {
+  margin-top: 5px;
+}
+
+div.compress div.entity div.description {
+  display: none;
+}
+
+div.compress div.entity div.detail div.clear {
+  clear: none!important;
+}
+
+div.entity div.tools img {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.disabled {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: right;
+  height: 100%;
+  width: 100%;
+  background: #000;
+}
+
+form.editable {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: right;
+  height: 100%;
+  padding: 3px;
+}
+
+form.editable label {
+  color: #fff;
+  display: inline;
+  margin-left: 5px;
+  margin-top: 7px;
+}
+
+form.editable input {
+  font-size: 100%;
+  padding: 3px;
+  width: 250px;
+}
+
+div.submit {
+  border: 1px solid #ccc;
+  border-top: 0;
+  background: #eee;
+  padding: 0.5em 1em;
+}
+
+div.submit p {
+  float: left;
+  width: 460px;
+}
+
+div.submit input {
+  border: 2px outset #999;
+  float: right;
+}
+
+a.bookmarklet {
+  color: #fff;
+  background: #FF4D00;
+  padding: 10px 20px;
+  border: 1px solid #F53500;
+  border-radius: 30px;
+  margin: 10px 0;
+  -webkit-box-shadow: 0 0 3px #000;
+  font-size: 150%;
+  display: inline-block;
+}
+
+a.bookmarklet:hover {
+  -webkit-box-shadow: 0 0 10px #000;
+  border: 1px solid #E51F00;
+}
+
+#lookupForm div.floatL {
+  float: left;
+  width: 320px;
+}
+
+#lookupForm fieldset.floatR {
+  float: right;
+  width: 150px;
+}
+
+#lookupForm label {
+  float: none;
+  display: inline;
+}
+
+#entitylookup fieldset {
+  border: 1px solid #ccc;
+}
+
+#entitylookup h2 {
+  padding-top: 20px;
+  clear: left;
+}
