@@ -126,6 +126,10 @@ label[for=extended] {
   margin: 0 0 1.5rem;
 }
 
+.clear {
+  clear: both;
+}
+
 
 
 
@@ -188,6 +192,10 @@ div.entity div.description {
   margin-top: 5px;
 }
 
+div.entity div.tools {
+  font-size: 150%;
+}
+
 div.compress div.entity div.description {
   display: none;
 }
@@ -199,96 +207,4 @@ div.compress div.entity div.detail div.clear {
 div.entity div.tools img {
   margin: 0 15px;
   cursor: pointer;
-}
-
-.disabled {
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  left: 0;
-  float: right;
-  height: 100%;
-  width: 100%;
-  background: #000;
-}
-
-form.editable {
-  z-index: 3;
-  position: absolute;
-  top: 0;
-  left: 0;
-  float: right;
-  height: 100%;
-  padding: 3px;
-}
-
-form.editable label {
-  color: #fff;
-  display: inline;
-  margin-left: 5px;
-  margin-top: 7px;
-}
-
-form.editable input {
-  font-size: 100%;
-  padding: 3px;
-  width: 250px;
-}
-
-div.submit {
-  border: 1px solid #ccc;
-  border-top: 0;
-  background: #eee;
-  padding: 0.5em 1em;
-}
-
-div.submit p {
-  float: left;
-  width: 460px;
-}
-
-div.submit input {
-  border: 2px outset #999;
-  float: right;
-}
-
-a.bookmarklet {
-  color: #fff;
-  background: #FF4D00;
-  padding: 10px 20px;
-  border: 1px solid #F53500;
-  border-radius: 30px;
-  margin: 10px 0;
-  -webkit-box-shadow: 0 0 3px #000;
-  font-size: 150%;
-  display: inline-block;
-}
-
-a.bookmarklet:hover {
-  -webkit-box-shadow: 0 0 10px #000;
-  border: 1px solid #E51F00;
-}
-
-#lookupForm div.floatL {
-  float: left;
-  width: 320px;
-}
-
-#lookupForm fieldset.floatR {
-  float: right;
-  width: 150px;
-}
-
-#lookupForm label {
-  float: none;
-  display: inline;
-}
-
-#entitylookup fieldset {
-  border: 1px solid #ccc;
-}
-
-#entitylookup h2 {
-  padding-top: 20px;
-  clear: left;
 }
