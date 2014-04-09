@@ -52,7 +52,6 @@ ul, p {
   color: #888888;
   font-size: 1rem;
   margin: 0 auto 2rem;
-  max-width: 30rem;
 }
 
 p.lead {
@@ -61,6 +60,10 @@ p.lead {
 
 p.dark {
   color: #333333;
+}
+
+h1, p.author {
+  text-align: center;
 }
 
 ul {
@@ -116,23 +119,30 @@ label {
 }
 
 #container {
-  max-width: 39rem;
+  max-width: 42rem;
   margin: 5rem auto;
   padding: 0 2rem;
-  text-align: center;
+  text-align: left;
 }
 
 .logo {
   width: 130px;
   opacity: 0.8;
-  margin: 0 0 1.5rem;
+  display: block;
+  margin: 0 auto 1.5rem;
 }
 
 .clear {
   clear: both;
 }
 
+#results {
+  background: #ffffff;
+}
 
+div.entity:nth-child(2n) {
+  background: #f8f8f8;
+}
 
 
 
@@ -142,14 +152,14 @@ label {
 
 div.entity {
   clear: both;
-  margin: 0 0 1rem;
-  padding: 0;
+  margin: 0;
+  padding: 0.8rem 1rem;
   position: relative;
 }
 
 div.entity div.html {
   float: left;
-  font-size: 300%;
+  font-size: 260%;
   width: 60px;
   text-align: center;
 }
