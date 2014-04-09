@@ -143,6 +143,16 @@ div.entity {
   margin: 0;
   padding: 0.8rem 1rem;
   position: relative;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+}
+
+div.entity:first-child {
+  border-top: 1px solid #cccccc;
+}
+
+div.entity:last-child {
+  border-bottom: 1px solid #cccccc;
 }
 
 div.entity div.html {
@@ -154,14 +164,14 @@ div.entity div.html {
 
 div.entity div.detail {
   float: right;
-  width: 465px;
+  width: 485px;
 }
 
 div.entity div.detail div.code,
 div.entity div.detail div.entityCode,
 div.entity div.detail div.entityName {
   float: left;
-  width: 100px;
+  width: 113px;
   font-size: 150%;
 }
 
