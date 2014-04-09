@@ -112,12 +112,6 @@ label {
   color: #888888;
 }
 
-.divider {
-  width: 5rem;
-  margin: 2rem auto;
-  border-top: 1px solid #cccccc;
-}
-
 #container {
   max-width: 42rem;
   margin: 5rem auto;
@@ -143,12 +137,6 @@ label {
 div.entity:nth-child(2n) {
   background: #f8f8f8;
 }
-
-
-
-
-
-
 
 div.entity {
   clear: both;
